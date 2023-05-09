@@ -1,0 +1,102 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.dashboard-mainContent {
+  display: flex;
+  flex-direction: column;
+  background-color: #c8cacd;
+}
+.dashboard1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  /* border-bottom: 5px solid gray; */
+  /* border-top: 5px solid gray; */
+  background-color: white;
+  border-radius: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.dashboard-image img {
+  height: 200px;
+  width: auto;
+  padding-top: 100px;
+  border-radius: 60%;
+}
+.dashboard-details {
+  /* border:1px solid black; */
+  border-left: 10px solid #c8cacd;
+  width: 50vw;
+  height: 60vh;
+
+  /* margin-left:80px; */
+}
+.dashboard-details button{
+    margin-top:60px;
+}
+.dashboard-details button a{
+    text-decoration: none;
+    color:inherit;
+}
+.dashboard-details h3 {
+  padding-left: 50px;
+  padding-top: 5px;
+}
+.dashboard2 {
+  display: flex;
+  background-color: white;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-radius: 20px 20px 0 0;
+}
+.dashboard2 img {
+  height: 400px;
+  width: 600px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.dashboard2 h2 {
+  padding-left: 30%;
+}
+.dashboard2-left {
+
+  margin-left: 20px;
+  padding-bottom: 20px;
+}
+.dashboard2-right {
+    padding-left: 40px;
+  padding-bottom: 20px;
+
+}
+.dashboard3 button {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.1s ease-in;
+  font-size: larger;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 3px 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.dashboard3 button:hover {
+  background-color: black;
+  color: white;
+  
+}
+.dashboard3 button a{
+    text-decoration: none;
+    color:inherit;
+}
+.dashboard3{
+    background-color: white;
+    margin-left: 40px;
+  margin-right: 40px;
+  border-radius: 0 0 20px 20px;
+  margin-bottom:20px;
+}
+

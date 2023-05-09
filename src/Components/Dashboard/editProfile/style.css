@@ -1,0 +1,71 @@
+.editprofile-main{
+    border:1px solid black;
+    margin: 40px 60px;
+    border-radius:20px;
+    background-color:#1e1e1e;
+}
+.editprofile-main h1{
+    color:white;
+    padding-left: 39vw;
+ }
+ .editprofile-main p{ 
+    color: red;
+    margin-left:18%;
+ }
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+.main-container .fullname{ 
+    display: flex;
+   justify-content: space-evenly;
+ 
+}
+.main-container .fullname .firstname{
+    width: 27vw;
+    padding-left: 150px;
+}
+.main-container .fullname .lastname{
+    width: 26vw;
+    padding-right: 338px;
+}
+.main-container .fullname .firstname input{
+    width:100%; 
+
+}
+.main-container .fullname .lastname input{ 
+    width:100%; 
+}
+
+
+.main-container .nonfile-input{
+    display: flex;
+    flex-direction: column;
+}
+.main-container .nonfile-input input{ 
+    height:50px;
+    width:60%;
+    margin-top:40px;
+    margin-left: 18%;
+    border:  none;
+   border-bottom:  2px  solid white ;
+   background-color: white;
+   color:#1E1E1E;
+   border-radius:5px;
+}
+.main-container .file-input{
+    display: flex;
+    flex-direction: column;
+}
+.main-container .file-input input{ 
+    
+    margin-top:40px;
+    margin-left: 18%;
+    border:  none;
+   color:white;
+   border-radius:5px;
+}
+.editprofile-main button{
+    margin-bottom:40px;
+}
