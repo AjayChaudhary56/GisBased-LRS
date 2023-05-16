@@ -52,7 +52,7 @@
 }
 .search-filter #btn-36{
   height: 50px;
-  background: transparent;
+  background: none !important;
   margin-left: 88vw;
   border: none;
   color: white;
@@ -60,5 +60,6 @@
   z-index: 2000;
   margin-top: 20px;
   font-size: 3rem;
+  border-radius: 50%;
   position: absolute;
 }

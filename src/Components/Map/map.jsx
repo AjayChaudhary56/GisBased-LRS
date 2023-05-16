@@ -22,9 +22,7 @@ const BasicMap = () => {
   const [popupData, setPopupData] = useState(null);
   const [zoom, setZoom] = useState(18);
   const [parcelId, setParcelID] = useState("");
-  const [base, setBase] = useState(
-    "http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}"
-  );
+  const [base, setBase] = useState("http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}");
   const inputRef = useRef(null);
   const mapRef = useRef();
   console.log(parcelId);
@@ -35,6 +33,14 @@ const BasicMap = () => {
       setZoom(zoom + 1); // zoom in
     }
   };
+  const toggle =(link)=>{
+    if (link === "http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}") {
+      setBase(" http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}" )
+    }
+    else{
+      setBase("http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}" )
+    }
+  }
 
   return (
     <div className="whole-map">
@@ -45,9 +51,10 @@ const BasicMap = () => {
           name="parcelId"
           placeholder="Enter your Parcel ID  "
         />
-        <button onClick={() => setParcelID(inputRef.current.value)}>
+        <button  onClick={() => setParcelID(inputRef.current.value)}>
           Search <GoSearch />
         </button>
+        <button id="btn-36" onClick={() => toggle(base)}><MdChangeCircle/> </button>
       </div>
       <div className="main-map" onWheel={handleScroll}>
         <MapContainer
@@ -58,9 +65,9 @@ const BasicMap = () => {
           {/* GOOGLE MAPS TILES */}
           <TileLayer
             attribution="Google Maps"
+            url={base}
             // url="http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}" // regular
-            url="http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}"
-            // "http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}" // satellite
+            // url="http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}" // satellite
             // url="http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}" // terrain
             maxZoom={20}
             subdomains={["mt0", "mt1", "mt2", "mt3"]}
