@@ -1,18 +1,68 @@
 import { useForm } from "react-hook-form";
-import React, { useState, useEffect } from "react";
+import React, { useState ,useEffect} from "react";
 import "./style.css";
+
 const EditProfile = () => {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [address, setAddress] = useState("");
   const [phonenumber, setPhonenumber] = useState("");
-  const [email, setEmail] = useState("");
   const [citizenship, setCitizenship] = useState("");
+  const [email, setEmail] = useState("");
+
+
+
+  // Example code for storing multiple files in localStorage
+
+
+
+  const handleFileInputChange1 = (event) => {
+    const file1 = event.target.files[0];
+   
+  
+    const reader = new FileReader();
+    reader.readAsDataURL(file1);
+   
+    reader.onload = () => {
+      const base64String = reader.result;
+      localStorage.setItem('file1', base64String);
+  
+  };
+
+  }
+  const handleFileInputChange3 = (event) => {
+    const file3 = event.target.files[0];
+   
+  
+    const reader = new FileReader();
+    reader.readAsDataURL(file3);
+   
+    reader.onload = () => {
+      const base64String = reader.result;
+      localStorage.setItem('file3', base64String);
+  
+  };
+
+  }
+  const handleFileInputChange2 = (event) => {
+    const file2 = event.target.files[0];
+   
+  
+    const reader = new FileReader();
+    reader.readAsDataURL(file2);
+   
+    reader.onload = () => {
+      const base64String = reader.result;
+      localStorage.setItem('file2', base64String);
+  
+  };
+
+  }
+
 
   useEffect(() => {
-    
-    localStorage.setItem('firstname', JSON.stringify(firstname));
-    const frnm =JSON.parse(localStorage.getItem("firstname"))
+    localStorage.setItem("firstname", JSON.stringify(firstname));
+    const frnm = JSON.parse(localStorage.getItem("firstname"));
     setFirstname(frnm);
 
     localStorage.setItem("lastname", JSON.stringify(lastname));
@@ -29,18 +79,36 @@ const EditProfile = () => {
 
     localStorage.setItem("citizenship", JSON.stringify(citizenship));
     const citizen = JSON.parse(localStorage.getItem("citizenship"));
-    setEmail(emale);
+    setCitizenship(citizen);
 
     localStorage.setItem("phonenumber", JSON.stringify(phonenumber));
     const phno = JSON.parse(localStorage.getItem("phonenumber"));
     setPhonenumber(phno);
-  }, [firstname, lastname, address, email,citizenship, phonenumber]);
+  }, [
+    firstname,
+    lastname,
+    address,
+    email,
+    citizenship,
+    phonenumber,
+    //  file1,file2 ,file3
+  ]);
 
   const {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      firstName: "Siddhant",
+      lastName: "Shrestha",
+      address: "Pokhara",
+      email: "sid@test.com",
+      citizenship: "12343455",
+      phonenumber: "9812312312",
+    },
+  });
+
   const onSubmit = (data) => {
     console.log("Submitted data ", data);
   };
@@ -59,7 +127,7 @@ const EditProfile = () => {
                 {...register("firstname", { required: true, maxLength: 20 })}
                 onChange={(e) => setFirstname(e.target.value)}
                 aria-invalid={errors.firstname ? "true" : "false"}
-                placeholder="First Name"
+                placeholder="  First Name"
               />
             </div>
             <div className="lastname">
@@ -69,17 +137,12 @@ const EditProfile = () => {
                 value={lastname}
                 {...register("lastname", {
                   required: true,
-                  pattern: /^[A-Za-z]+$/i,
                 })}
                 onChange={(e) => {
                   setLastname(e.target.value);
-                  localStorage.setItem(
-                    "lastname",
-                    JSON.stringify(e.target.value)
-                  );
                 }}
                 aria-invalid={errors.lastname ? "true" : "false"}
-                placeholder="Last Name"
+                placeholder="  Last Name"
               />
             </div>
           </div>
@@ -97,11 +160,12 @@ const EditProfile = () => {
             {...register("address", { required: true })}
             onChange={(e) => setAddress(e.target.value)}
             aria-invalid={errors.address ? "true" : "false"}
-            placeholder=" Address"
+            placeholder="  Address"
           />
           {errors.address?.type === "required" && (
             <p role="alert">Address is required</p>
           )}
+
           <input
             type="number"
             id="phonenumber"
@@ -109,11 +173,12 @@ const EditProfile = () => {
             {...register("phonenumber", { required: true, maxLength: 10 })}
             onChange={(e) => setPhonenumber(e.target.value)}
             aria-invalid={errors.phonenumber ? "true" : "false"}
-            placeholder="Phone Number"
+            placeholder="  Phone Number"
           />
           {errors.phonenumber?.type === "required" && (
             <p role="alert">Phone Number is required</p>
           )}
+
           <input
             type="email"
             id="email"
@@ -121,28 +186,45 @@ const EditProfile = () => {
             {...register("email", { required: true })}
             onChange={(e) => setEmail(e.target.value)}
             aria-invalid={errors.email ? "true" : "false"}
-            placeholder="Email Address "
+            placeholder="  Email Address "
           />
           {errors.email?.type === "required" && (
-            <p role="alert">Email Addressis required</p>
+            <p role="alert">Email Address is required</p>
           )}
+
           <input
-            type="citizenship"
+            type="text"
             id="citizenship"
             value={citizenship}
             {...register("citizenship", { required: true })}
             onChange={(e) => setCitizenship(e.target.value)}
             aria-invalid={errors.citizenship ? "true" : "false"}
-            placeholder="Citizenship Number "
+            placeholder="  Citizenship Number "
           />
-          {errors.email?.type === "required" && (
-            <p role="alert">Email Addressis required</p>
+          {errors.citizenship?.type === "required" && (
+            <p role="alert">citizenship Number is required</p>
           )}
         </div>
         <div className="file-input">
-          <input type="file" name="file1" />
-          <input type="file" name="file2" />
-          <input type="file" name="file3" />
+          <label>All file must be in JPG, JPEG ,PNG </label>
+          <label>Profile Pic </label>
+          <input
+            type="file"
+            onChange={handleFileInputChange1}
+            name="file1"
+            />
+            <label>Citizenship Front </label>
+          <input
+            type="file"
+            onChange={handleFileInputChange2}
+  name="file2"
+          />
+          <label>Citizenship Back </label>
+          <input
+            type="file"
+            onChange={handleFileInputChange3}
+            name="file3"
+          />
         </div>
 
         <button id="btn" type="submit">

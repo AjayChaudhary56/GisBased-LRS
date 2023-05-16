@@ -1,0 +1,43 @@
+.detail1{
+    display: flex;
+  width: 90%;
+  height: 40%;
+  background: white;
+  color: black;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-left: 40px;
+} 
+.detailpage1 h2{
+    margin-left: 51px;
+    margin-top: 20px;
+}
+.detail-image {
+    display: flex;
+    flex-direction: column;
+    width:
+}
+
+.detail-image img {
+    width: 68%;
+    height: auto;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.detail-desc p{
+font-size: larger;
+margin-top: 5px;
+}
+.detail-desc {
+    width:100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.detail-image button{
+    margin: 23px 0 10px 50px !important;
+    color: black;
+    transition: 0.3s ease-out;
+}
+.detail-image button:hover {
+    color: white;
+  }

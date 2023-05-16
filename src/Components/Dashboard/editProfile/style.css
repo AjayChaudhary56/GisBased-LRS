@@ -60,7 +60,7 @@
 }
 .main-container .file-input input{ 
     
-    margin-top:40px;
+    margin-top:10px;
     margin-left: 18%;
     border:  none;
    color:white;
@@ -68,4 +68,9 @@
 }
 .editprofile-main button{
     margin-bottom:40px;
+}
+.main-container label{
+    margin-left: 18%;
+    color: white;
+    margin-top: 10px; 
 }

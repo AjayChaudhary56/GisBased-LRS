@@ -6,7 +6,12 @@ import Navbar from "./Container/Navbar/navbar";
 import  Dashboard from './Components/Dashboard/dashboard';
 import Axios from "./Test/axios";
 import EditProfile from "./Components/Dashboard/editProfile";
-import DetailPage from "./DetailPage";
+import LandRequested from "./Components/Dashboard/landRequested/landRequested";
+import LandAccepted from "./Components/Dashboard/landAccepted";
+import LandRejected from "./Components/Dashboard/landRejected";
+import Detail from "./Components/Dashboard/detail";
+import BasicMap from "./Components/Map/map";
+
 function App() {
   return (
     <>
@@ -16,8 +21,12 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
           <Route path="/axios" element={<Axios />}></Route>
-          <Route path="/detail" element={<DetailPage />}></Route>
+          <Route path="/detail" element={<Detail />}></Route>
+          <Route path="/map" element={<BasicMap />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/landRequested" element={<LandRequested />}></Route>
+          <Route path="/landAccepted" element={<LandAccepted />}></Route>
+          <Route path="/landRejected" element={<LandRejected />}></Route>
           <Route path="/dashboardEditProfile" element={<EditProfile  />}></Route>
         </Routes>
       </Router>

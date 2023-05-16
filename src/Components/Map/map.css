@@ -1,0 +1,64 @@
+
+.leaflet-container {
+  height: 90vh;
+
+}
+
+.cluster-icon {
+  background-color: #333;
+  height: 2em;
+  width: 2em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  box-shadow: 0 0 0px 5px #fff;
+}
+
+
+#map a{
+  position:absolute;
+  left:10px;
+  bottom:10px;
+  z-index:999;
+}
+.search-filter input{
+  height: 48px;
+    width: 30vw;
+    margin-left: 106px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: -87px;
+    z-index: 2000;
+    margin-top: 20px;
+    position: absolute;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.search-filter button{
+  height: 48px;
+  width:100px;
+  margin-left: 38vw;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: -87px;
+    z-index: 2000;
+    margin-top: 20px;
+    font-size: larger;
+    position: absolute;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.search-filter #btn-36{
+  height: 50px;
+  background: transparent;
+  margin-left: 88vw;
+  border: none;
+  color: white;
+  margin-bottom: -87px;
+  z-index: 2000;
+  margin-top: 20px;
+  font-size: 3rem;
+  position: absolute;
+}

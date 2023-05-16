@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "../card";
-
-const LandAccepted = () => {
+const LandRequested = () => {
   return (
     <div>
       <Card />
@@ -12,4 +11,4 @@ const LandAccepted = () => {
   );
 };
 
-export default LandAccepted;
+export default LandRequested;

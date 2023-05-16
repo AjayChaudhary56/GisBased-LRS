@@ -41,12 +41,14 @@
   }
 .main-container {
   position: relative;
+
 }
 .list-items {
   position: absolute;  
   width: 200px;
   padding:0 0;
   margin-top:40px;
+
 }
 .list-items a {
   display: flex;
