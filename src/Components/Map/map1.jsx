@@ -31,3 +31,5 @@
 // }
 
 // export default map1jsx
+
+// write a code for map integration?
