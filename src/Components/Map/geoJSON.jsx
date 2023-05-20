@@ -2,11 +2,11 @@ import { GeoJSON, MapContainer, Marker, useMapEvents } from "react-leaflet";
 import geoJsonFileData from "./geoJSONdata.json";
 import * as ReactDOMServer from "react-dom/server";
 import { useEffect, useState } from "react";
-import L from 'leaflet'
+
 
 const GeoJSONLayer = ({ searchParcelId, setPopupData }) => {
   console.log(`searchParcelId :: ${searchParcelId}`);
-
+  
   var prevLayerClicked = null;
   const map = useMapEvents({});
   const Popup = ({ feature, layer }) => {

@@ -1,0 +1,32 @@
+.add-land-main-container{
+    display: flex;
+    flex-direction: column;
+}
+.add-land-main-container input{ 
+    height:50px;
+    width:60%;
+    margin-top:40px;
+    margin-left: 18%;
+    border:  none;
+   border-bottom:  2px  solid white ;
+   background-color: white;
+   color:#1E1E1E;
+   border-radius:5px;
+ }
+.addland-main{
+    border:1px solid black;
+    margin: 40px 25% 20px 25%;
+    border-radius:20px;
+    background-color:#1e1e1e;
+}
+.addland-main h1{
+    color:white;
+   
+ }
+ .addland-main button{
+    margin-bottom:20px;
+ } 
+ .addland-main p{
+    color:red;
+    padding-left: 18%;
+ }

@@ -11,6 +11,8 @@ import LandAccepted from "./Components/Dashboard/landAccepted";
 import LandRejected from "./Components/Dashboard/landRejected";
 import Detail from "./Components/Dashboard/detail";
 import BasicMap from "./Components/Map/map";
+import Card from "./Components/Dashboard/card";
+import AddLand from "./Components/AddLand";
 
 function App() {
   return (
@@ -19,9 +21,12 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/card" element={<Card />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
+          <Route path="/addLand" element={<AddLand />}></Route>
           <Route path="/axios" element={<Axios />}></Route>
           <Route path="/detail" element={<Detail />}></Route>
+          <Route index   element={<BasicMap />}></Route>
           <Route path="/map" element={<BasicMap />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/landRequested" element={<LandRequested />}></Route>

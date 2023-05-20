@@ -3,10 +3,8 @@ import { GoSearch } from "react-icons/go";
 import { MdChangeCircle } from "react-icons/md";
 import {
   MapContainer,
-  Marker,
   Popup,
   TileLayer,
-  useMapEvents,
   // Marker,
   // Popup,
   // useMapEvents,
@@ -16,7 +14,7 @@ import {
 import GeoJSONLayer from "./geoJSON";
 import "./map.css";
 import "leaflet/dist/leaflet.css";
-import geoJsonFileData from "./geoJSONdata.json";
+import { Link } from "react-router-dom";
 
 const BasicMap = () => {
   const [popupData, setPopupData] = useState(null);
@@ -55,9 +53,9 @@ const BasicMap = () => {
         <button onClick={() => setParcelID(inputRef.current.value)}>
           Search <GoSearch />
         </button>
-        <button id="btn-36" onClick={() => toggle(base)}>
+        <Link id="btn-36" onClick={() => toggle(base)}>
           <MdChangeCircle />{" "}
-        </button>
+        </Link>
       </div>
       <div className="main-map" onWheel={handleScroll}>
         <MapContainer

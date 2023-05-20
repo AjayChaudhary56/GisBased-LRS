@@ -9,7 +9,8 @@ const Navbar = () => {
     <>
       <div className="navbar">
         <div className="logo">
-          <img src={logo} alt="logo" />
+         <Link to="/
+         "> <img src={logo} alt="logo" /></Link>
         </div>
         <div className="nav-items">
           <ul>
@@ -19,6 +20,10 @@ const Navbar = () => {
             <li>
               {" "}
               <Link to="/map">Map</Link>{" "}
+            </li>
+            <li>
+              {" "}
+              <Link to="/addLand">Add Land</Link>{" "}
             </li>
             <li  className="drop-down">
                 
