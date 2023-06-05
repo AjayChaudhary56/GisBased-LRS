@@ -4,20 +4,25 @@ import "./navbar.css";
 const Newdropdown = () => {
   const [visual, setVisual] = useState(false);
 
-  const see = () => {
+  // const see = () => {
+  //   setVisual(!visual);
+  // };
+  const dontsee = () => {
     setVisual(!visual);
+    
   };
+
   return (
     <>
       <div className="main-container">
-        <Link onClick={see} to="#">
+        <Link  onMouseOverCapture={dontsee} to="#">
           Others{" "}
         </Link>
         {visual ? (
           <div className="list-items" >
-            <Link to="#">Search Land</Link>
-            <Link to="#">Owned LAnd</Link>
-            <Link to="#">Search Land Sale</Link>
+            <Link to="/ownedLand">Owned Land</Link>
+            <Link to="/searchLandSale">Search Land Sale</Link>
+            <Link to="/transOwnership">Transfer Ownership</Link>
           </div>
         ) : null}
       </div>

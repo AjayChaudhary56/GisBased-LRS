@@ -1,6 +1,6 @@
 .add-land-main-container{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
 }
 .add-land-main-container input{ 
     height:50px;
@@ -24,7 +24,8 @@
    
  }
  .addland-main button{
-    margin-bottom:20px;
+    margin-bottom:60px;
+    margin-top:80px;
  } 
  .addland-main p{
     color:red;
